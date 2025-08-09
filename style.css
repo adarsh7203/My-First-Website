@@ -1,0 +1,122 @@
+/* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff5f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar styling */
+header {
+    background-color: #ffd6e0;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    color: #ff4d6d;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4d6d;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #ffe6eb;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #ff4d6d;
+}
+
+/* About section */
+.about {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.about ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.about ul li {
+    margin: 0.5rem 0;
+}
+
+/* Contact section */
+.contact {
+    background-color: #ffe6eb;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.contact button {
+    padding: 0.8rem;
+    border: none;
+    background-color: #ff4d6d;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #e63950;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffd6e0;
+    color: #333;
+}

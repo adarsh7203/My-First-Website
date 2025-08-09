@@ -15,7 +15,7 @@ body {
 
 /* Navbar styling */
 header {
-    background-color: #ffd6e0;
+    background-color: #ffd6e0; /* light pink */
     padding: 1rem;
 }
 
@@ -54,7 +54,7 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 4rem 1rem;
-    background-color: #ffe6eb;
+    background-color: #e6f7ff; /* soft blue */
 }
 
 .hero h2 {
@@ -64,22 +64,43 @@ nav ul li a:hover {
 
 /* About section */
 .about {
-    padding: 2rem 1rem;
+    padding: 0; /* remove extra padding for full-width box */
+    background-color: #fff0f5; /* very light pink */
+}
+
+.about-box {
+    background-color: #ffe6eb; /* soft pastel pink */
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%; /* full width */
+    margin: 0; /* no side margins */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-.about ul {
-    list-style: none;
-    margin-top: 1rem;
+.about-box h2 {
+    color: #ff4d6d;
+    margin-bottom: 1rem;
 }
 
-.about ul li {
+.about-box p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.about-box ul {
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.about-box ul li {
     margin: 0.5rem 0;
 }
 
 /* Contact section */
 .contact {
-    background-color: #ffe6eb;
+    background-color: #f0fff0; /* light mint green */
     padding: 2rem 1rem;
     text-align: center;
 }

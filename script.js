@@ -1,33 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const greetingElement = document.createElement("h3");
-    greetingElement.style.textAlign = "center";
-    greetingElement.style.marginTop = "10px";
-    document.querySelector(".hero").appendChild(greetingElement);
+    const greeting = document.createElement("div");
+    greeting.style.position = "fixed";
+    greeting.style.top = "10px";
+    greeting.style.right = "10px";
+    greeting.style.background = "#ff4d6d";
+    greeting.style.color = "white";
+    greeting.style.padding = "10px 15px";
+    greeting.style.borderRadius = "8px";
+    greeting.style.fontSize = "1rem";
+    greeting.style.zIndex = "1000";
+    document.body.appendChild(greeting);
 
-    const hours = new Date().getHours();
-    let greeting = "";
-
-    if (hours >= 5 && hours < 12) {
-        greeting = "Good Morning 🌞";
-    } else if (hours >= 12 && hours < 18) {
-        greeting = "Good Afternoon 🌤️";
-    } else if (hours >= 18 && hours < 21) {
-        greeting = "Good Evening 🌇";
-    } else {
-        greeting = "Good Night 🌙";
+    function updateGreeting() {
+        const hour = new Date().getHours();
+        if (hour >= 5 && hour < 12) {
+            greeting.textContent = "Good Morning 🌞";
+        } else if (hour >= 12 && hour < 18) {
+            greeting.textContent = "Good Afternoon ☀️";
+        } else if (hour >= 18 && hour < 21) {
+            greeting.textContent = "Good Evening 🌇";
+        } else {
+            greeting.textContent = "Good Night 🌙";
+        }
     }
 
-    greetingElement.textContent = greeting;
+    updateGreeting();
 
-    const darkModeToggle = document.createElement("button");
-    darkModeToggle.textContent = "Toggle Dark Mode";
-    darkModeToggle.style.margin = "20px auto";
-    darkModeToggle.style.display = "block";
-    darkModeToggle.style.padding = "10px 20px";
-    darkModeToggle.style.cursor = "pointer";
-    document.body.insertBefore(darkModeToggle, document.body.firstChild);
+    const darkModeBtn = document.createElement("button");
+    darkModeBtn.textContent = "Toggle Dark Mode";
+    darkModeBtn.style.position = "fixed";
+    darkModeBtn.style.bottom = "10px";
+    darkModeBtn.style.right = "10px";
+    darkModeBtn.style.padding = "10px";
+    darkModeBtn.style.background = "#333";
+    darkModeBtn.style.color = "#fff";
+    darkModeBtn.style.border = "none";
+    darkModeBtn.style.borderRadius = "8px";
+    darkModeBtn.style.cursor = "pointer";
+    document.body.appendChild(darkModeBtn);
 
-    darkModeToggle.addEventListener("click", function () {
+    darkModeBtn.addEventListener("click", function () {
         document.body.classList.toggle("dark-mode");
     });
 });

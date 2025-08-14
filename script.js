@@ -1,41 +1,33 @@
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href'))
-            .scrollIntoView({ behavior: 'smooth' });
-    });
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const greetingElement = document.createElement("h3");
+    greetingElement.style.textAlign = "center";
+    greetingElement.style.marginTop = "10px";
+    document.querySelector(".hero").appendChild(greetingElement);
 
-const heroText = document.getElementById('hero-text');
-let hour = new Date().getHours();
-if (hour < 12) {
-    heroText.innerText = "Good Morning 🌅 Adarsh's World 🌍💻";
-} else if (hour < 18) {
-    heroText.innerText = "Good Afternoon ☀ Adarsh's World 🌍💻";
-} else {
-    heroText.innerText = "Good Evening 🌙 Adarsh's World 🌍💻";
-}
+    const hours = new Date().getHours();
+    let greeting = "";
 
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    let name = document.getElementById('name').value.trim();
-    let email = document.getElementById('email').value.trim();
-    let message = document.getElementById('message').value.trim();
-
-    if (!name || !email || !message) {
-        alert("Please fill out all fields before sending! 💡");
-        return;
-    }
-    alert("Thank you for your message, " + name + "! 💌");
-    this.reset();
-});
-
-const darkModeBtn = document.getElementById('dark-mode-toggle');
-darkModeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    if (document.body.classList.contains('dark-mode')) {
-        darkModeBtn.textContent = "☀ Light Mode";
+    if (hours >= 5 && hours < 12) {
+        greeting = "Good Morning 🌞";
+    } else if (hours >= 12 && hours < 18) {
+        greeting = "Good Afternoon 🌤️";
+    } else if (hours >= 18 && hours < 21) {
+        greeting = "Good Evening 🌇";
     } else {
-        darkModeBtn.textContent = "🌙 Dark Mode";
+        greeting = "Good Night 🌙";
     }
+
+    greetingElement.textContent = greeting;
+
+    const darkModeToggle = document.createElement("button");
+    darkModeToggle.textContent = "Toggle Dark Mode";
+    darkModeToggle.style.margin = "20px auto";
+    darkModeToggle.style.display = "block";
+    darkModeToggle.style.padding = "10px 20px";
+    darkModeToggle.style.cursor = "pointer";
+    document.body.insertBefore(darkModeToggle, document.body.firstChild);
+
+    darkModeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+    });
 });

@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
     <header>
         <nav>
             <h1>Adarsh 💙</h1>
@@ -17,16 +16,15 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button id="dark-mode-toggle">🌙 Dark Mode</button>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
-        <h2>Welcome to My World 🌍💻</h2>
+        <h2 id="hero-text">Welcome to My World 🌍💻</h2>
         <p>Hi! I’m Adarsh, a tech enthusiast who loves coding and creativity.</p>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="about-box">
             <h2>About Me</h2>
@@ -42,22 +40,20 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="4" required></textarea>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
             <button type="submit">Send Message 💌</button>
         </form>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>Made with 💖 by Adarsh | 2025</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
-
